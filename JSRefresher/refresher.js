@@ -195,6 +195,41 @@
     //{name} = {name: 'Sam', age: 20}
     //console.log{name} //Output: Sam
 
+//################################
+//#!Reference and Primitive Types
+//################################
+    //Primitive Types - Number, Strings and boeleans
+    const number = 1;
+    const num2 = number; //creates a copy of number
+
+    //Reference Types - Objects and Arrays
+    const person  = {
+        name: 'Sam'
+    };
+    const secondPerson = person; //The whole object is store and not person.
+    person.name = 'James'; //This will change the name pointer inside the person object
+
+    const Secondperson  = {       //Using spreas ... creates a real copy of person
+        ...person
+    };
+    
 //#################
-//#!Reference and Primative Types
+//#!Array Functions
 //#################
+    const numbers = [1, 2, 3];
+    const doublNumArray = numbers.map((num) => { //The function is executed on each element in the array
+        return num * 2;
+    }); 
+    console.log(numbers);
+    console.log(doublNumArray);
+
+    /*
+    map()  =>       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    find()  =>      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+    findIndex()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+    filter()  =>    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+    reduce()  =>    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=b
+    concat()  =>    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=b
+    slice()  =>     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+    splice()  =>    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+    */
